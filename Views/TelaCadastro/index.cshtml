@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/TelaCadastrocss.css">
+</head>
+<body>
+<!-- Hot Bar - Barra superior -->
+<div class="hot-bar">
+    <div class="left-side">
+        <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
+        <div class="find-pet">Find Pet</div>
+    </div>
+    <div class="right-side">
+        <div class="hot-bar-item"><a href="#">Sobre nós</a></div>
+        <div class="hot-bar-item"><a href="#">Redes Sociais</a></div>
+        <div class="hot-bar-item login"><a href="#">Login</a></div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Lado esquerdo: Imagem gatinho -->
+    <div>
+        <img class="gato" src="/imagem/gatoroxo.png" alt="Gato">
+    </div>
+
+    <!-- Lado direito: Formulário -->
+    <form asp-action="Create" asp-controller="TelaCadastro" method="post" enctype="multipart/form-data" class="form-container">
+        <div class="form-text">
+            <h2>Cadastre-se</h2>
+        </div>
+        <hr class="divider" />
+
+        <!-- Campos do Formulário -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Nome">Nome Completo</label>
+                <input type="text" id="Nome" name="Nome" value="@Model?.Nome" placeholder="Digite seu nome completo" required />
+            </div>
+            <div class="form-group">
+                <label for="Email">E-mail</label>
+                <input type="text" id="Email" name="Email" value="@Model?.Email" placeholder="Digite seu melhor E-mail" required />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Senha">Senha</label>
+                <input type="password" id="Senha" name="Senha" value="@Model?.Senha" placeholder="Digite uma senha" required />
+            </div>
+            <div class="form-group">
+                <label for="CPF">CPF</label>
+                <input type="text" id="CPF" name="CPF" value="@Model?.CPF" placeholder="Digite seu CPF" required />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Telefone">Telefone</label>
+                <input type="text" id="Telefone" name="Telefone" value="@Model?.Telefone" placeholder="Digite seu telefone" required />
+            </div>
+            <div class="form-group">
+                <label for="DataNascimento">Data de Nascimento</label>
+                <input type="date" id="DataNascimento" name="DataNascimento" value="@Model?.DataNascimento.ToString("yyyy-MM-dd")" required />
+            </div>
+        </div>
+
+        <button type="submit">Próximo</button>
+    </form>
+</div>
+
+</body>
+</html>

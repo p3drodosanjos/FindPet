@@ -1,0 +1,178 @@
+/* Adiciona Flexbox para alinhar os campos nas linhas */
+.form-container {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Diminuir o espaço entre os campos na mesma linha de 20px para 10px */
+    margin-bottom: 0px; /* Diminuir o espaçamento entre as linhas de campos */
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px; /* Diminuir o espaço abaixo de cada grupo de campos */
+}
+
+/* Ajuste para garantir que todos os campos de entrada tenham o mesmo tamanho */
+input[type="text"], input[type="date"], input[type="string"] {
+    width: 100%; /* Garantir que todos os campos ocupem a largura completa do contêiner */
+    padding: 8px; /* Tamanho do preenchimento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    margin-top: 5px; /* Espaço acima do campo */
+    border: 1px solid #ccc; /* Cor da borda */
+    border-radius: 4px; /* Cantos arredondados */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #88A3E2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 100% da altura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo */
+    background: #E1EBF0;
+}
+
+/* Hot Bar - Barra superior */
+.hot-bar {
+    display: flex;
+    justify-content: space-between; /* Espalha a logo e os links à direita e esquerda */
+    align-items: center; /* Alinha os itens verticalmente */
+    background-color: #E1EBF0; /* Cor de fundo */
+    color: black; /* Cor do texto */
+    height: 50px; /* Altura da barra */
+    position: fixed; /* Fixa a barra no topo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    z-index: 1000; /* Garante que fique sobre outros elementos */
+    border-bottom: 3px solid #88A3E2; /* Linha azul na parte inferior */
+    padding: 0 15px; /* Espaçamento interno */
+}
+
+/* Contêiner para logo e texto Find Pet no lado esquerdo */
+.left-side {
+    display: flex; /* Coloca logo e texto ao lado um do outro */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.hot-bar-logo {
+    height: 50px; /* Define a altura da logo */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaçamento entre a logo e o texto */
+}
+
+.find-pet {
+    font-size: 18px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Torna o texto em negrito */
+    color: black; /* Cor do texto */
+}
+
+/* Contêiner para os itens da barra (alinhados à direita) */
+.right-side {
+    display: flex; /* Organiza os itens em linha */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.hot-bar-item {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+/* Caixa azul ao redor do item "Login" */
+.hot-bar-item.login a {
+    padding: 5px 15px; /* Adiciona preenchimento ao redor do link */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #88A3E2;/* Cor de fundo azul claro */
+    color: black; /* Cor do texto */
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.hot-bar-item.login a:hover {
+    background-color: #1E90FF; /* Cor de fundo quando passar o mouse */
+    color: black; /* Cor do texto ao passar o mouse */
+}
+
+.hot-bar-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.hot-bar-item a:hover {
+    color: #007bff; /* Muda a cor do texto ao passar o mouse */
+}
+
+.container {
+    display: flex; /* Já existente para alinhar os itens lado a lado */
+    width: 100%; /* A largura do contêiner ocupa toda a tela */
+    height: 100vh; /* A altura do contêiner ocupa toda a tela */
+    align-items: flex-end; /* Alinha os itens no final da altura do contêiner (parte inferior) */
+}
+
+.image-container {
+    width: 50%; /* 50% da largura da tela */
+    height: 100%; /* 100% da altura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #f5f5f5; /* Cor de fundo, pode ser ajustada */
+}
+
+.gato {
+    max-width: 140%; /* Ajusta o tamanho da imagem para que ela não ocupe toda a largura */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.form-container {
+    width: 50%; /* 50% da largura da tela */
+    height: 100%; /* 100% da altura da tela */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o formulário */
+    margin-left: 80px; /* Adiciona margem à esquerda, movendo os campos para a direita */
+}
+
+.form-text {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.divider {
+    border: 0;
+    border-top: 4px solid blue;
+    margin: 10px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro 2</title>
+    <link rel="stylesheet" href="/css/TelaCadastro2css.css">
+</head>
+<body>
+<!-- Hot Bar - Barra superior -->
+<div class="hot-bar">
+    <div class="left-side">
+        <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
+        <div class="find-pet">Find Pet</div>
+    </div>
+    <div class="right-side">
+        <div class="hot-bar-item"><a href="#">Sobre nós</a></div>
+        <div class="hot-bar-item"><a href="#">Redes Sociais</a></div>
+        <div class="hot-bar-item login"><a href="#">Login</a></div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Lado esquerdo: Imagem gatinho -->
+    <div>
+        <img class="gato" src="/imagem/gatoroxo.png" alt="Gato">
+    </div>
+
+    <!-- Lado direito: Formulário -->
+    <form asp-action="Create" asp-controller="TelaCadastro2" method="post" enctype="multipart/form-data" class="form-container">
+        <div class="form-text">
+            <h2>Cadastre-se</h2>
+        </div>
+        <hr class="divider" />
+
+        <!-- Campos do Formulário -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="CEP">CEP</label>
+                <input type="text" id="CEP" name="CEP" value="@Model?.CEP" placeholder="Digite seu CEP" required />
+            </div>
+            <div class="form-group">
+                <label for="Rua">Rua</label>
+                <input type="text" id="Rua" name="Rua" value="@Model?.Rua" placeholder="Digite sua Rua" required />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Bairro">Bairro</label>
+                <input type="text" id="Bairro" name="Bairro" value="@Model?.Bairro" placeholder="Digite seu bairro" required />
+            </div>
+            <div class="form-group">
+                <label for="Cidade">Cidade</label>
+                <input type="text" id="Cidade" name="Cidade" value="@Model?.Cidade" placeholder="Digite sua cidade" required />
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Numero">Número</label>
+                <input type="string" id="Numero" name="Numero" value="@Model?.Numero" placeholder="Digite o número" required />
+            </div>
+            <div class="form-group">
+                <label for="Complemento">Complemento</label>
+                <input type="text" id="Complemento" name="Complemento" value="@Model?.Complemento" placeholder="Digite o complemento" required />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Estado">Estado</label>
+                <input type="text" id="Estado" name="Estado" value="@Model?.Estado" placeholder="Digite seu estado" required />
+            </div>
+            <div class="form-group">
+                <label for="Pais">País</label>
+                <input type="text" id="Pais" name="Pais" value="@Model?.Pais" placeholder="Digite seu país" required />
+            </div>
+        </div>
+        
+        <button type="submit">Cadastre-se</button>
+    </form>
+</div>
+
+      <!-- Referência ao arquivo JavaScript -->
+      <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,96 +1,75 @@
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed</title>
-    <link rel="stylesheet" href="/css/TelaPublicacaocss.css">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/TelaCadastrocss.css">
 </head>
 <body>
-    <!-- Barra superior fixa -->
-    <div class="hot-bar">
-        <div class="left-side">
-            <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
-            <div class="find-pet">Find Pet</div>
-        </div>
-        <div class="right-side">
-            <div class="hot-bar-item"><a href="#">Sobre nós</a></div>
-            <div class="hot-bar-item"><a href="#">Redes Sociais</a></div>
-            <div class="hot-bar-item login"><a href="#">Login</a></div>
-        </div>
+<!-- Hot Bar - Barra superior -->
+<div class="hot-bar">
+    <div class="left-side">
+        <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
+        <div class="find-pet">Find Pet</div>
+    </div>
+    <div class="right-side">
+        <div class="hot-bar-item"><a href="#">Sobre n�s</a></div>
+        <div class="hot-bar-item"><a href="#">Redes Sociais</a></div>
+        <div class="hot-bar-item login"><a href="#">Login</a></div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Lado esquerdo: Imagem gatinho -->
+    <div>
+        <img class="gato" src="/imagem/gatoroxo.png" alt="Gato">
     </div>
 
-    <!-- Contêiner do formulário -->
-    <div class="form-container">
-        <form method="post" action="/TelaPublicacao/Create" enctype="multipart/form-data">
-            <h2>Informações do Pet Desaparecido</h2>
-            <div class="form-grid">
-                <!-- Campos do formulário -->
-                <div class="form-group">
-                    <label for="nome">Nome do Pet:</label>
-                    <input type="text" id="nome" name="Nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="raca">Raça:</label>
-                    <input type="text" id="raca" name="Raca" required>
-                </div>
-                <div class="form-group">
-                    <label for="cor">Cor:</label>
-                    <input type="text" id="cor" name="Cor" required>
-                </div>
-                <div class="form-group">
-                    <label for="porte">Porte:</label>
-                    <input type="text" id="porte" name="Porte" required>
-                </div>
-                <div class="form-group">
-                    <label for="local">Local do Desaparecimento:</label>
-                    <input type="text" id="local" name="LocalDesaparecimento" required>
-                </div>
-                <div class="form-group">
-                    <label for="data">Data do Desaparecimento:</label>
-                    <input type="date" id="data" name="DataDesaparecimento" required>
-                </div>
-                <div class="form-group">
-                    <label for="chip">Nº Chip:</label>
-                    <input type="text" id="chip" name="Chip" required>
-                </div>
-                <div class="form-group">
-                    <label for="legenda">Legenda:</label>
-                    <textarea id="legenda" name="Legenda" rows="3"></textarea>
-                </div>
+    <!-- Lado direito: Formul�rio -->
+    <form asp-action="Create" asp-controller="TelaCadastro" method="post" enctype="multipart/form-data" class="form-container">
+        <div class="form-text">
+            <h2>Cadastre-se</h2>
+        </div>
+        <hr class="divider" />
+
+        <!-- Campos do Formul�rio -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Nome">Nome Completo</label>
+                <input type="text" id="Nome" name="Nome" value="@Model?.Nome" placeholder="Digite seu nome completo" required />
             </div>
-
-            <!-- Campo para upload de imagem -->
-            <div class="image-upload">
-                <label for="image">Escolher imagem:</label>
-                <input type="file" id="image" name="Image" accept="image/*" onchange="previewImage(event)">
-                <br>
-                <!-- Imagem escolhida será exibida aqui -->
-                <img id="image-preview" src="" alt="Imagem escolhida" style="display: none; max-width: 100%; margin-top: 20px;">
+            <div class="form-group">
+                <label for="Email">E-mail</label>
+                <input type="text" id="Email" name="Email" value="@Model?.Email" placeholder="Digite seu melhor E-mail" required />
             </div>
+        </div>
 
-            <!-- Botão de submissão -->
-            <button type="submit">Publicar</button>
-        </form>
-    </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Senha">Senha</label>
+                <input type="password" id="Senha" name="Senha" value="@Model?.Senha" placeholder="Digite uma senha" required />
+            </div>
+            <div class="form-group">
+                <label for="CPF">CPF</label>
+                <input type="text" id="CPF" name="CPF" value="@Model?.CPF" placeholder="Digite seu CPF" required />
+            </div>
+        </div>
 
-    <script>
-        function previewImage(event) {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-            reader.onload = function() {
-                const imagePreview = document.getElementById('image-preview');
-                imagePreview.src = reader.result;
-                imagePreview.style.display = 'block'; // Exibe a imagem
-            }
-            if (file) {
-                reader.readAsDataURL(file); // Converte a imagem para base64
-            }
-        }
-    </script>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Telefone">Telefone</label>
+                <input type="text" id="Telefone" name="Telefone" value="@Model?.Telefone" placeholder="Digite seu telefone" required />
+            </div>
+            <div class="form-group">
+                <label for="DataNascimento">Data de Nascimento</label>
+                <input type="date" id="DataNascimento" name="DataNascimento" value="@Model?.DataNascimento.ToString("yyyy-MM-dd")" required />
+            </div>
+        </div>
+
+        <button type="submit">Pr�ximo</button>
+    </form>
+</div>
+
 </body>
 </html>

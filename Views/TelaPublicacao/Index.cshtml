@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="/css/TelaPublicacaocss.css">
+</head>
+<body>
+    <!-- Hot Bar - Barra superior -->
+    <div class="hot-bar">
+        <div class="left-side">
+            <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
+            <div class="find-pet">Find Pet</div>
+        </div>
+        <div class="right-side">
+            <div class="hot-bar-item"><a href="#">Sobre nós</a></div>
+            <div class="hot-bar-item"><a href="#">Redes Sociais</a></div>
+            <div class="hot-bar-item login"><a href="#">Login</a></div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <!-- Div principal que contém o formulário e o upload de imagem -->
+        <div class="form-content">
+            <!-- Receptor de Imagem -->
+            <div class="image-upload">
+                <label for="imagem">Upload de Foto do Pet:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*">
+                <div class="image-preview" id="imagePreview">
+                    <p>Nenhuma imagem selecionada</p>
+                </div>
+            </div>
+
+            <!-- Formulário de Cadastro -->
+            <form method="post" action="/TelaPublicacao/Create">
+                <h2>Informações do Pet Desaparecido</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nome">Nome do Pet:</label>
+                        <input type="text" id="nome" name="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="raca">Raça:</label>
+                        <input type="text" id="raca" name="Raca" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cor">Cor:</label>
+                        <input type="text" id="cor" name="Cor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="porte">Porte:</label>
+                        <input type="text" id="porte" name="Porte" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="local">Local do Desaparecimento:</label>
+                        <input type="text" id="local" name="LocalDesaparecimento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data do Desaparecimento:</label>
+                        <input type="date" id="data" name="DataDesaparecimento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chip">Nº Chip:</label>
+                        <input type="text" id="chip" name="Chip" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="legenda">Legenda:</label>
+                        <textarea id="legenda" name="Legenda" rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

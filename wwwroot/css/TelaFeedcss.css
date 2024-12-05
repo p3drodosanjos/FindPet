@@ -101,10 +101,11 @@ body {
     align-items: center;
     background-color: #ffffff;
     border: 2px solid #ddd;
-    border-radius: 25px;
+    border-radius: 250px;
     padding: 1px 10px;
     width: 300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateX(20px);
 }
 
 /* Campo de entrada */
@@ -121,7 +122,7 @@ body {
     background-color: #ffffff;
     color: white;
     border: none;
-    padding: 8px 12px;
+    padding: 1px 12px;
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
@@ -129,5 +130,40 @@ body {
 }
 
     .search-button:hover {
-        background-color: #0056b3;
+        background-color: #88A3E2;
     }
+
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 6%;
+    height: 93vh; /* Altura da viewport */
+    font-family: Calibri;
+}
+
+.iniciar-publicacao {
+    padding: 4px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #88A3E2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.publicacao {
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+
+

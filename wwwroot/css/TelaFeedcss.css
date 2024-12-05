@@ -1,4 +1,17 @@
 
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E1EBF0;
+
+}
+
 
 .hot-bar {
     display: flex;
@@ -38,6 +51,7 @@
 .right-side {
     display: flex; /* Organiza os itens em linha */
     align-items: center; /* Alinha os itens verticalmente */
+    
 }
 
 .hot-bar-item {
@@ -68,3 +82,52 @@
         .hot-bar-item a:hover {
             color: #007bff; /* Muda a cor do texto ao passar o mouse */
         }
+
+
+
+/* Barra horizontal (navbar) */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container da barra de pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    padding: 1px 10px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Campo de entrada */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Botão de pesquisa */
+.search-button {
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .search-button:hover {
+        background-color: #0056b3;
+    }

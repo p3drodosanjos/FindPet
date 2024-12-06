@@ -136,12 +136,14 @@ body {
 
 .botao {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 6%;
-    height: 93vh; /* Altura da viewport */
-    font-family: Calibri;
+    justify-content: center; /* Centraliza horizontalmente */
+    position: fixed; /* Garante que o botão fique fixo na tela */
+    top: 60px; /* Ajuste de acordo com a altura da sua barra superior */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Garante que o botão esteja acima de outros elementos */
 }
+
 
 .iniciar-publicacao {
     padding: 4px 30px;

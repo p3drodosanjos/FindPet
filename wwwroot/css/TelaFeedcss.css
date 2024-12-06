@@ -136,12 +136,14 @@ body {
 
 .botao {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 6%;
-    height: 93vh; /* Altura da viewport */
-    font-family: Calibri;
+    justify-content: center; /* Centraliza horizontalmente */
+    position: fixed; /* Garante que o botão fique fixo na tela */
+    top: 60px; /* Ajuste de acordo com a altura da sua barra superior */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Garante que o botão esteja acima de outros elementos */
 }
+
 
 .iniciar-publicacao {
     padding: 4px 30px;
@@ -155,15 +157,40 @@ body {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.publicacao {
+
+.container {
     display: flex;
     justify-content: center;
-    align-items:baseline;
+    align-items: center;
     background-color: #D9D9D9;
-    border-radius: 10px;
-    margin: 0;
-    padding: 0;
+    border-radius: 50px;
+    height: 700px;
+    width: 500px;
+    position:relative;
 }
 
+.itens {
+    position: absolute; /* Para posicionamento relativo ao container */
+    bottom: 20px; /* Ajuste para o quanto deseja afastar do fundo */
+    left: 20px; /* Ajuste para o quanto deseja afastar do lado esquerdo */
+    display: flex; /* Coloca os itens em linha */
+    gap: 18px; /* Espaçamento entre os itens */
+}
 
+.item-pub {
+    font-size: 24px; /* Ajuste o tamanho dos ícones conforme necessário */
+    color: #333;
+}
 
+.lado-direito {
+    position: absolute; /* Para posicionamento relativo ao container */
+    bottom: 20px; /* Ajuste para o quanto deseja afastar do fundo */
+    right: 50px; /* Ajuste para o quanto deseja afastar do lado esquerdo */
+    display: flex; /* Coloca os itens em linha */
+   
+}
+
+.mensagem {
+    font-size: 24px; /* Ajuste o tamanho dos ícones conforme necessário */
+    color: #333;
+}

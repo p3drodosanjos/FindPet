@@ -3,24 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login - Find Pet</title>
+    <link rel="stylesheet" href="/css/TelaLogincss.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form action="#" method="POST">
-            <div class="input-group">
-                <label for="username">Usuario</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu usuario" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-            </div>
-            <button type="submit" class="btn">Entrar</button>
-            <p class="register-link">Nao tem uma conta? <a href="#">Registre-se</a></p>
-        </form>
+
+    <!-- Barra de navegação -->
+    <div class="hot-bar">
+        <div class="left-side">
+            <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
+            <div class="find-pet">Find Pet</div>
+        </div>
     </div>
+
+    <!-- Conteúdo principal da página de login -->
+    <div class="login-container">
+        <h1>Faça seu Login</h1>
+
+        <form action="/TelaLogin/Login" method="post" class="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" class="form-control" placeholder="Digite seu email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="Senha" class="form-control" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="login-button">Entrar</button>
+        </form>
+
+        <div class="login-options">
+            <a href="/TelaCadastro/Index" class="register-link">Não tem uma conta? Cadastre-se</a>
+            <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Find Pet. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="/sobre" class="footer-link">Sobre Nós</a>
+                <a href="/contato" class="footer-link">Contato</a>
+                <a href="/politica-de-privacidade" class="footer-link">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

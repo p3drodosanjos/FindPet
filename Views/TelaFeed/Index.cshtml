@@ -3,43 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed</title>
-    <link rel="stylesheet" href="/css/TelaFeedcss.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Login - Find Pet</title>
+    <link rel="stylesheet" href="/css/TelaLogincss.css">
 </head>
 <body>
 
+    <!-- Barra de navegação -->
     <div class="hot-bar">
-
         <div class="left-side">
             <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
             <div class="find-pet">Find Pet</div>
         </div>
+    </div>
 
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Pesquisar...">
-            <button class="search-button">🔍</button>
-        </div>
+    <!-- Conteúdo principal da página de login -->
+    <div class="login-container">
+        <h1>Faça seu Login</h1>
 
+        <form action="/TelaLogin/Login" method="post" class="login-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" class="form-control" placeholder="Digite seu email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="Senha" class="form-control" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="login-button">Entrar</button>
+        </form>
 
-        <div class="right-side">
-            <div class="hot-bar-item"><i class="bi bi-chat" style="font-size:30px"></i></div>
-            <div class="hot-bar-item"><i class="bi bi-bell" style="font-size:30px"></i></div>
-            <div class="hot-bar-item login"><i class="bi bi-person-circle" style="font-size:30px"></i></div>
+        <div class="login-options">
+            <a href="/TelaCadastro/Index" class="register-link">Não tem uma conta? Cadastre-se</a>
+            <a href="#" class="forgot-password">Esqueceu sua senha?</a>
         </div>
     </div>
 
-    <div class="botao">
-        <button class="iniciar-publicacao">Iniciar Publicação</button>
-    </div>
-
-  
-
-
-
-
-
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Find Pet. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="/sobre" class="footer-link">Sobre Nós</a>
+                <a href="/contato" class="footer-link">Contato</a>
+                <a href="/politica-de-privacidade" class="footer-link">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
-

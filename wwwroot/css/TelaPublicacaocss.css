@@ -1,214 +1,216 @@
+html {
+    font-size: 150%; /* Define um tamanho base maior para as fontes, útil para escalabilidade. */
+}
+
 /* Estilo geral do corpo da página */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #E1EBF0; /* Fundo suave */
+    margin: 0; /* Remove margens padrão. */
+    padding: 0; /* Remove espaçamentos internos. */
+    font-family: Arial, sans-serif; /* Define a fonte padrão. */
+    background-color: #E1EBF0; /* Define uma cor de fundo suave. */
 }
 
 /* Barra superior fixa com logo e links */
 .hot-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #E1EBF0;
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 3px solid #88A3E2;
-    padding: 0 15px;
+    display: flex; /* Define um layout flexível para alinhamento horizontal. */
+    justify-content: space-between; /* Espaça os elementos uniformemente. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    background-color: #E1EBF0; /* Cor de fundo da barra. */
+    height: 50px; /* Define a altura fixa da barra. */
+    position: fixed; /* Mantém a barra visível no topo durante o scroll. */
+    top: 0; /* Fixa no topo da página. */
+    left: 0; /* Alinha à esquerda da tela. */
+    width: 100%; /* Ocupa toda a largura da tela. */
+    z-index: 1000; /* Garante que a barra esteja acima de outros elementos. */
+    border-bottom: 3px solid #88A3E2; /* Adiciona uma borda inferior azul. */
+    padding: 0 15px; /* Espaçamento interno horizontal. */
 }
 
+/* Grupos da barra superior */
 .left-side, .right-side {
-    display: flex;
-    align-items: center;
+    display: flex; /* Organiza os itens horizontalmente. */
+    align-items: center; /* Centraliza verticalmente. */
 }
 
 /* Estilo da logo */
 .hot-bar-logo {
-    height: 50px;
-    margin-right: 10px;
+    height: 50px; /* Define a altura da logo. */
+    margin-right: 10px; /* Adiciona um espaçamento à direita. */
 }
 
 .find-pet {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 18px; /* Tamanho do texto do título. */
+    font-weight: bold; /* Deixa o texto em negrito. */
 }
 
 /* Espaçamento entre itens da barra */
 .hot-bar-item {
-    margin: 0 15px; /* Espaçamento entre os itens */
+    margin: 0 15px; /* Define espaçamento horizontal entre os itens. */
 }
 
     /* Caixa azul ao redor do item "Login" */
     .hot-bar-item.login a {
-        padding: 5px 15px; /* Adiciona preenchimento ao redor do link */
-        border-radius: 5px; /* Cantos arredondados */
-        background-color: #88A3E2; /* Cor de fundo azul claro */
-        color: black; /* Cor do texto */
-        font-size: 16px;
-        text-decoration: none;
+        padding: 5px 15px; /* Adiciona preenchimento interno ao link. */
+        border-radius: 5px; /* Deixa os cantos arredondados. */
+        background-color: #88A3E2; /* Define um fundo azul claro. */
+        color: black; /* Define a cor do texto. */
+        font-size: 16px; /* Tamanho da fonte. */
+        text-decoration: none; /* Remove sublinhado do link. */
     }
 
         .hot-bar-item.login a:hover {
-            background-color: #1E90FF; /* Cor de fundo quando passar o mouse */
-            color: black; /* Cor do texto ao passar o mouse */
+            background-color: #1E90FF; /* Muda o fundo ao passar o mouse. */
+            color: black; /* Mantém o texto preto no hover. */
         }
 
+    /* Estilo geral para links da barra */
     .hot-bar-item a {
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
+        text-decoration: none; /* Remove sublinhado. */
+        color: black; /* Define a cor do texto. */
+        font-size: 16px; /* Tamanho da fonte. */
     }
 
 /* Contêiner alinhando o formulário à direita */
 .form-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-    margin-top: 70px; /* Compensa o espaço da barra */
+    display: flex; /* Cria um layout flexível. */
+    justify-content: flex-end; /* Empurra o formulário para a direita. */
+    padding: 20px; /* Adiciona espaçamento interno. */
+    margin-top: 70px; /* Evita sobreposição com a barra fixa. */
 }
 
 /* Removido o fundo do formulário */
 form {
-    width: 50%; /* Formulário ocupa 50% da largura */
-    padding: 20px 0;
+    width: 60%; /* Define o formulário com 60% da largura disponível. */
+    padding: 20px 0; /* Espaçamento interno no topo e na base. */
 }
 
-/* Título do formulário */
 h2 {
-    text-align: center;
-    color: #333;
+    font-size: 38px; /* Ajusta o tamanho do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #333; /* Define a cor do texto */
+    margin-bottom: 14px; /* Adiciona espaçamento abaixo do título */
+    position: relative; /* Necessário para o pseudo-elemento da linha */
 }
+
+.titulo-pet::after {
+    content: ""; /* Adiciona um elemento vazio para criar a linha */
+    display: block; /* Garante que seja tratado como bloco */
+    width: 30%; /* Define a largura da linha */
+    height: 3px; /* Espessura da linha */
+    background-color: #88A3E2; /* Cor da linha */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
+}
+
 
 /* Grid de duas colunas */
 .form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    display: grid; /* Define o layout como grid. */
+    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de tamanho igual. */
+    gap: 20px; /* Espaçamento entre os elementos do grid. */
 }
 
 /* Estilo de cada grupo de campo */
 .form-group {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Define layout flexível. */
+    flex-direction: column; /* Alinha os itens verticalmente. */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
 }
+
 
 /* Estilo do texto do label */
 label {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: bold; /* Deixa o texto do rótulo em negrito. */
+    margin-bottom: 5px; /* Adiciona espaço abaixo do rótulo. */
 }
 
 /* Estilo dos campos de entrada */
 input[type="text"], input[type="date"], textarea {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
+    padding: 8px; /* Espaçamento interno. */
+    font-size: 14px; /* Tamanho da fonte. */
+    border: 1px solid #ccc; /* Borda cinza clara. */
+    border-radius: 4px; /* Cantos arredondados. */
+    width: 100%; /* Preenche toda a largura do contêiner. */
 }
 
 /* Estilo para textarea */
 textarea {
-    resize: none;
+    resize: none; /* Impede redimensionamento do campo. */
 }
 
 /* Botão de envio */
 button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #88A3E2;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
+    width: 100%; /* Ocupa toda a largura do contêiner. */
+    padding: 10px; /* Adiciona espaçamento interno. */
+    font-size: 16px; /* Define o tamanho da fonte. */
+    background-color: #88A3E2; /* Fundo azul. */
+    color: white; /* Texto branco. */
+    border: none; /* Remove a borda. */
+    border-radius: 4px; /* Cantos arredondados. */
+    cursor: pointer; /* Muda o cursor para indicar clicável. */
+    margin-top: 20px; /* Espaço acima do botão. */
 }
 
-    /* Hover no botão */
     button:hover {
-        background-color: #0056b3;
+        background-color: #0056b3; /* Muda o fundo no hover. */
     }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     form {
-        width: 90%;
+        width: 90%; /* Formulário ocupa quase toda a largura. */
     }
 
     .form-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Converte para uma única coluna. */
     }
 }
 
 /* Contêiner principal centralizado */
 .form-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Alinha verticalmente os elementos */
-    gap: 20px;
-    width: 80%; /* Reduz a largura para evitar que ocupe toda a tela */
-    max-width: 1200px; /* Limita o máximo para telas grandes */
-    margin: auto; /* Centraliza horizontalmente */
-    height: calc(100vh - 70px); /* Usa a altura total da tela menos a barra superior */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    display: flex; /* Layout flexível. */
+    justify-content: space-between; /* Espaça elementos uniformemente. */
+    align-items: center; /* Alinha verticalmente. */
+    gap: 20px; /* Espaçamento entre elementos. */
+    width: 80%; /* Limita largura a 80% da tela. */
+    max-width: 1200px; /* Máxima largura para telas grandes. */
+    margin: auto; /* Centraliza horizontalmente. */
+    height: calc(100vh - 70px); /* Usa altura total menos a barra superior. */
+    box-sizing: border-box; /* Inclui bordas no tamanho total. */
 }
 
-/* Receptor de imagem ocupa 40% */
-.image-upload {
-    flex: 1;
-    max-width: 40%; /* Mantém a largura da área de imagem */
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px; /* Ajusta o espaço entre a imagem e o formulário */
-    align-items: flex-start; /* Alinha os itens à esquerda */
+    /* Receptor de imagem ocupa 40% */
+    .image-upload {
+    flex: 1; /* Permite ajuste proporcional. */
+    max-width: 10%; /* Limita largura da área de upload. */
+    display: flex; /* Layout flexível. */
+    flex-direction: column; /* Alinha elementos verticalmente. */
+    align-items: center; /* Centraliza horizontalmente. */
+    text-align: center; /* Centraliza o texto. */
+    gap: 10px; /* Espaçamento entre itens. */
 }
 
-    /* Move o texto e o botão para a esquerda */
-    .image-upload label,
-    .image-upload input {
-        margin-left: -20px; /* Move tanto o texto quanto o botão para a esquerda */
-    }
-
-        /* Estilo do input (botão de escolher arquivo) */
-        .image-upload input[type="file"] {
-            margin-left: -50px; /* Move o botão de escolher arquivo mais para a esquerda */
-        }
-
-/* Formulário ocupa 60% e tem a linha de separação */
-form {
-    flex: 1;
-    max-width: 60%; /* Formulário ocupa 60% da tela */
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente os campos */
-    border-left: 3px solid #88A3E2; /* Linha vertical de separação */
-    padding-left: 30px; /* Ajustado para um melhor espaçamento entre a linha e o conteúdo */
+.upload-icon {
+    cursor: pointer; /* Muda o cursor para indicar clicável. */
+    font-size: 60px; /* Tamanho grande para o ícone. */
+    color: #88A3E2; /* Define cor do ícone. */
+    display: flex; /* Layout flexível. */
+    justify-content: center; /* Centraliza horizontalmente. */
+    align-items: center; /* Centraliza verticalmente. */
+    width: 80px; /* Define largura. */
+    height: 80px; /* Define altura. */
+    border: 3px solid #88A3E2; /* Borda azul. */
+    border-radius: 50%; /* Forma circular. */
+    transition: all 0.3s ease; /* Animação suave no hover. */
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .form-content {
-        flex-direction: column; /* Empilha os elementos verticalmente */
-        height: auto; /* Permite que a altura se ajuste automaticamente */
+    .upload-icon:hover {
+        background-color: #88A3E2; /* Fundo azul no hover. */
+        color: white; /* Texto branco no hover. */
     }
 
-    .image-upload,
-    form {
-        max-width: 100%;
-    }
-
-    /* Remove a linha em telas menores */
-    form {
-        border-left: none;
-        padding-left: 0;
-    }
+.image-upload input[type="file"] {
+    display: none; /* Esconde o campo de upload padrão. */
 }
-
-

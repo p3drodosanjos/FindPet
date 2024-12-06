@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed</title>
+    <title>PublicaÃ§Ã£o</title>
     <link rel="stylesheet" href="/css/TelaPublicacaocss.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- Hot Bar - Barra superior -->
@@ -14,59 +16,65 @@
             <div class="find-pet">Find Pet</div>
         </div>
         <div class="right-side">
-            <div class="hot-bar-item"><a href="#">Sobre nós</a></div>
-            <div class="hot-bar-item"><a href="#">Redes Sociais</a></div>
-            <div class="hot-bar-item login"><a href="#">Login</a></div>
+            <div class="hot-bar-item login"><a href="#">InÃ­cio</a></div>
         </div>
     </div>
 
     <div class="form-container">
-        <!-- Div principal que contém o formulário e o upload de imagem -->
+        <!-- Div principal que contï¿½m o formulï¿½rio e o upload de imagem -->
         <div class="form-content">
             <!-- Receptor de Imagem -->
             <div class="image-upload">
-                <label for="imagem">Upload de Foto do Pet:</label>
-                <input type="file" id="imagem" name="imagem" accept="image/*">
+                <p>Imagem do Pet</p>
+                <label for="imagem" class="upload-icon">
+                    <i class="fa-solid fa-upload"></i>
+                </label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" hidden>
                 <div class="image-preview" id="imagePreview">
-                    <p>Nenhuma imagem selecionada</p>
+                
+                    <!-- A prÃ©-visualizaÃ§Ã£o serÃ¡ exibida aqui -->
                 </div>
             </div>
 
-            <!-- Formulário de Cadastro -->
+
+
+            <!-- Formulï¿½rio de Cadastro -->
             <form method="post" action="/TelaPublicacao/Create">
-                <h2>Informações do Pet Desaparecido</h2>
+                <div class="titulo-pet">
+                    <h2>Publique sobre seu pet perdido<h2>
+                </div>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="nome">Nome do Pet:</label>
-                        <input type="text" id="nome" name="Nome" required>
+                        <input type="text" id="nome" name="Nome" placeholder="Digite o nome do pet" required>
                     </div>
                     <div class="form-group">
-                        <label for="raca">Raça:</label>
-                        <input type="text" id="raca" name="Raca" required>
+                        <label for="raca">RaÃ§a:</label>
+                        <input type="text" id="raca" name="Raca" placeholder="Digite a raÃ§a do pet" required>
                     </div>
                     <div class="form-group">
                         <label for="cor">Cor:</label>
-                        <input type="text" id="cor" name="Cor" required>
+                        <input type="text" id="cor" name="Cor" placeholder="Digite a cor do pet" required>
                     </div>
                     <div class="form-group">
                         <label for="porte">Porte:</label>
-                        <input type="text" id="porte" name="Porte" required>
+                        <input type="text" id="porte" name="Porte" placeholder="Digite o porte do pet" required>
                     </div>
                     <div class="form-group">
                         <label for="local">Local do Desaparecimento:</label>
-                        <input type="text" id="local" name="LocalDesaparecimento" required>
+                        <input type="text" id="local" name="LocalDesaparecimento" placeholder="Digite o local do desaparecimento" required>
                     </div>
                     <div class="form-group">
                         <label for="data">Data do Desaparecimento:</label>
                         <input type="date" id="data" name="DataDesaparecimento" required>
                     </div>
                     <div class="form-group">
-                        <label for="chip">Nº Chip:</label>
-                        <input type="text" id="chip" name="Chip" required>
+                        <label for="chip">NÂº Chip:</label>
+                        <input type="text" id="chip" name="Chip" placeholder="Digite o nÂº do chip" required>
                     </div>
                     <div class="form-group">
                         <label for="legenda">Legenda:</label>
-                        <textarea id="legenda" name="Legenda" rows="3"></textarea>
+                        <textarea id="legenda" name="Legenda" placeholder="Legenda da publicaÃ§Ã£o"></textarea>
                     </div>
                 </div>
                 <button type="submit">Publicar</button>

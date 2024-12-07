@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using findPet.Models
+@model TelaPublicacaoFeed
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -33,12 +36,13 @@
 
         <div class="botao">
             <button class="iniciar-publicacao">Iniciar Publicação</button>
-         </div>
+        </div>
 
         <div class="container">
             <h1>Publicação</h1>
 
             <div class="itens">
+                <img src="/Imagem/@Model.ImageFileName" alt="publicacaoImagem">
                 <div class="item-pub"><i class="fa-solid fa-paw"></i></div>
                 <div class="item-pub"><i class="fa-solid fa-comment"></i></div>
                 <div class="item-pub"><i class="fa-solid fa-rotate-right"></i></div>
@@ -48,7 +52,7 @@
                 <div class="mensagem"><i class="fa-solid fa-envelope"></i></div>
             </div>
 
-           </div>
+        </div>
 
     </main>
 </body>

@@ -1,12 +1,13 @@
 /* Estilo geral */
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 /* Hot Bar - Barra superior */
@@ -26,59 +27,6 @@ body {
     padding: 0 15px; /* Espaçamento interno */
 }
 
-/* Contêiner para logo e texto Find Pet no lado esquerdo */
-.left-side {
-    display: flex; /* Coloca logo e texto ao lado um do outro */
-    align-items: center; /* Alinha verticalmente */
-}
-
-.hot-bar-logo {
-    height: 50px; /* Define a altura da logo */
-    width: auto; /* Mantém a proporção da imagem */
-    margin-right: 10px; /* Espaçamento entre a logo e o texto */
-}
-
-.find-pet {
-    font-size: 18px; /* Define o tamanho da fonte */
-    font-weight: bold; /* Torna o texto em negrito */
-    color: black; /* Cor do texto */
-}
-
-/* Contêiner para os itens da barra (alinhados à direita) */
-.right-side {
-    display: flex; /* Organiza os itens em linha */
-    align-items: center; /* Alinha os itens verticalmente */
-}
-
-.hot-bar-item {
-    margin: 0 15px; /* Espaçamento entre os itens */
-}
-
-    /* Caixa azul ao redor do item "Login" */
-    .hot-bar-item.login a {
-        padding: 5px 15px; /* Adiciona preenchimento ao redor do link */
-        border-radius: 5px; /* Cantos arredondados */
-        background-color: #88A3E2; /* Cor de fundo azul claro */
-        color: black; /* Cor do texto */
-        font-size: 16px;
-        text-decoration: none;
-    }
-
-        .hot-bar-item.login a:hover {
-            background-color: #1E90FF; /* Cor de fundo quando passar o mouse */
-            color: black; /* Cor do texto ao passar o mouse */
-        }
-
-    .hot-bar-item a {
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
-    }
-
-        .hot-bar-item a:hover {
-            color: #007bff; /* Muda a cor do texto ao passar o mouse */
-        }
-
 /* Container do formulário */
 .login-container {
     background: #ffffff;
@@ -89,72 +37,26 @@ body {
     width: 100%;
     max-width: 400px;
 }
-
-    /* Título */
-    .login-container h1 {
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-/* Grupo de inputs */
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-    /* Label */
-    .input-group label {
-        display: block;
-        margin-bottom: 5px;
-        color: #555;
-        font-size: 14px;
-    }
-
-    /* Input */
-    .input-group input {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-sizing: border-box;
-        outline: none;
-        transition: border-color 0.3s;
-    }
-
-        .input-group input:focus {
-            border-color: #007bff;
-        }
-
-/* Botão */
-.btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-    .btn:hover {
-        background-color: #0056b3;
-    }
-
 /* Link de registro */
 .register-link {
     margin-top: 15px;
     font-size: 14px;
     color: #555;
+    display: block; /* Garante que ocupa toda a linha */
+    text-align: center; /* Centraliza o texto */
 }
 
-    .register-link a {
-        color: #007bff;
-        text-decoration: none;
-    }
+/* Link para "Esqueceu sua senha" */
+.forgot-password {
+    margin-top: 10px; /* Espaçamento abaixo do registro */
+    font-size: 14px;
+    color: #007bff;
+    display: block; /* Garante que ocupa toda a linha */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none;
+}
 
-        .register-link a:hover {
-            text-decoration: underline;
-        }
+    .forgot-password:hover {
+        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    }
+    

@@ -40,9 +40,14 @@
 
         <div class="container">
             <h1>Publicação</h1>
+            <h3>@Model.Nome</h3>
 
             <div class="itens">
-                <img src="/Imagem/@Model.ImageFileName" alt="publicacaoImagem">
+                @{
+                  if (Model.ImageFileName != null) {
+                        <img src="/Imagem/@Model.ImageFileName" alt="publicacaoImagem">
+                  }
+                }
                 <div class="item-pub"><i class="fa-solid fa-paw"></i></div>
                 <div class="item-pub"><i class="fa-solid fa-comment"></i></div>
                 <div class="item-pub"><i class="fa-solid fa-rotate-right"></i></div>

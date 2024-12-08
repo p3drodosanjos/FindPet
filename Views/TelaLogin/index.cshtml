@@ -7,36 +7,46 @@
     <link rel="stylesheet" href="/css/TelaLogincss.css">
 </head>
 <body>
-
     <!-- Barra de navegação -->
     <div class="hot-bar">
         <div class="left-side">
             <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
             <div class="find-pet">Find Pet</div>
         </div>
-    </div>
-
-    <!-- Conteúdo principal da página de login -->
-    <div class="login-container">
-        <h1>Faça seu Login</h1>
-
-        <form action="/TelaLogin/Login" method="post" class="login-form">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="Email" class="form-control" placeholder="Digite seu email" required>
+        <div class="right-side">
+            <div class="hot-bar-item login">
+                <a href="/TelaLogin/Index">Login</a>
             </div>
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="Senha" class="form-control" placeholder="Digite sua senha" required>
-            </div>
-            <button type="submit" class="login-button">Entrar</button>
-        </form>
-
-        <div class="login-options">
-            <a href="/TelaCadastro/Index" class="register-link">Não tem uma conta? Cadastre-se</a>
-            <a href="#" class="forgot-password">Esqueceu sua senha?</a>
         </div>
     </div>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <!-- Imagem à esquerda -->
+        <div class="image-container">
+            <img src="https://cdn.discordapp.com/attachments/761408347118370818/1298444351554453658/comportamento-cachorro-dono-20160618-001.png?ex=6756e3c9&is=67559249&hm=80052ccb9a0bfc7ba44418a4fa1e23bc82ccf9122255040a8eb8e313213acf7a&" alt="Homem com cachorro">
+        </div>
+
+        <!-- Caixa de login -->
+        <div class="login-container">
+            <h1>Faça seu Login</h1>
+            <form action="/TelaLogin/Login" method="post" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" class="form-control" placeholder="Digite seu email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="Senha" class="form-control" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+            <div class="login-options">
+                <a href="/TelaCadastro/Index" class="register-link">Não tem uma conta? Cadastre-se</a>
+                <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+            </div>
+        </div>
+    </main>
 
     <!-- Rodapé -->
     <footer class="footer">
@@ -49,6 +59,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>

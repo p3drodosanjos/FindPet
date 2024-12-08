@@ -10,10 +10,16 @@ namespace findPet.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            // Recupera os dados do TempData
-            var model = JsonConvert.DeserializeObject<TelaPublicacaoFeed>((string)TempData["TelaPublicacaoModel"]);
+            if (TempData.ContainsKey("TelaPublicacaoModel"))
+            {
+                // Recupera os dados do TempData
+                var model = JsonConvert.DeserializeObject<TelaPublicacaoFeed>((string)TempData["TelaPublicacaoModel"]);
 
-            return View(model);
+                return View(model);
+            }
+
+            TelaPublicacaoFeed feed = new();
+            return View(feed);
         }
 
     }

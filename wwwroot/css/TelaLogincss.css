@@ -72,6 +72,7 @@ body {
 .hot-bar-item.login a:hover {
     background-color: #1E90FF; /* Cor de fundo quando passar o mouse */
     color: black; /* Cor do texto ao passar o mouse */
+    cursor: pointer;
 }
 
 .hot-bar-item a {

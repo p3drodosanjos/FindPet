@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Hot Bar - Barra superior */
+.hot-bar {
+    display: flex;
+    justify-content: space-between; /* Espalha a logo e os links à direita e esquerda */
+    align-items: center; /* Alinha os itens verticalmente */
+    background-color: #E1EBF0; /* Cor de fundo */
+    color: black; /* Cor do texto */
+    height: 50px; /* Altura da barra */
+    position: fixed; /* Fixa a barra no topo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    z-index: 1000; /* Garante que fique sobre outros elementos */
+    border-bottom: 3px solid #88A3E2; /* Linha azul na parte inferior */
+    padding: 0 15px; /* Espaçamento interno */
+}
+
+/* Contêiner para logo e texto Find Pet no lado esquerdo */
+.left-side {
+    display: flex; /* Coloca logo e texto ao lado um do outro */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.hot-bar-logo {
+    height: 50px; /* Define a altura da logo */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaçamento entre a logo e o texto */
+}
+
+.find-pet {
+    font-size: 18px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Torna o texto em negrito */
+    color: black; /* Cor do texto */
+}
+
+/* Contêiner para os itens da barra (alinhados à direita) */
+.right-side {
+    display: flex; /* Organiza os itens em linha */
+    align-items: center; /* Alinha os itens verticalmente */
+    cursor: pointer;
+}
+
+.hot-bar-item {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+/* Caixa azul ao redor do item "Login" */
+.hot-bar-item.login a {
+    padding: 5px 15px; /* Adiciona preenchimento ao redor do link */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #88A3E2;/* Cor de fundo azul claro */
+    color: black; /* Cor do texto */
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.hot-bar-item.login a:hover {
+    background-color: #1E90FF; /* Cor de fundo quando passar o mouse */
+    color: black; /* Cor do texto ao passar o mouse */
+}
+
+.hot-bar-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.hot-bar-item a:hover {
+    color: #007bff; /* Muda a cor do texto ao passar o mouse */
+}
+
+
+header {
+    background-color: #88A3E2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 50px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

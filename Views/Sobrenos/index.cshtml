@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Sobre Nós";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Sobrenoscss.css">
+</head>
+<body>
+<!-- Hot Bar - Barra superior -->
+<div class="hot-bar">
+    <div class="left-side">
+        <img src="/imagem/logo_find_pet.webp" alt="Logo" class="hot-bar-logo">
+        <div class="find-pet">Find Pet</div>
+    </div>
+    <div class="right-side">
+        <div class="hot-bar-item" onclick="location.href='https://www.instagram.com';"><a>Redes Sociais</a></div>
+        <div class="hot-bar-item login" onclick="location.href='TelaCadastro';"><a>Retornar</a></div>
+    </div>
+</div>
+    <header>
+        <h1>Sobre Nós</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Quem Somos</h2>
+            <p>Somos uma rede social dedicada a conectar pessoas em uma missão especial: reunir famílias e seus animais de estimação perdidos. Acreditamos que nenhum animal deve ficar longe de quem o ama, e usamos a tecnologia e a solidariedade para criar uma comunidade forte e engajada.</p>
+        </section>
+        
+        <section>
+            <h2>Nossa Missão</h2>
+            <p>Promover reencontros entre animais perdidos e seus tutores por meio da colaboração comunitária e de recursos tecnológicos, fortalecendo a rede de apoio entre amantes dos animais.
+</p>
+        </section>
+
+        <section>
+            <h2>Nossos Valores</h2>
+            <ul>
+                <li>Empatia: Entendemos a dor de perder um animal e trabalhamos para aliviar esse sofrimento.</li>
+                <li>Colaboração: A união de esforços é a chave para alcançar resultados incríveis.</li>
+                <li>Inovação: Usamos a tecnologia para facilitar e agilizar os reencontros.</li>
+                <li>Respeito aos Animais: Acreditamos que todo animal merece cuidado, proteção e amor.</li>
+                <li>Comunidade: Valorizamos o poder das pessoas trabalhando juntas por um propósito maior.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Find Pet. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

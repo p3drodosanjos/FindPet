@@ -97,6 +97,7 @@ body {
 .right-side {
     display: flex; /* Organiza os itens em linha */
     align-items: center; /* Alinha os itens verticalmente */
+    cursor: pointer;
 }
 
 .hot-bar-item {

@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Find Pet</title>
     <link rel="stylesheet" href="/css/TelaLogincss.css">
+    <script>
+        // Função para redirecionar ao clicar no botão
+        function redirecionar(event) {
+            event.preventDefault(); // Evita o envio do formulário padrão
+            window.location.href = "/TelaFeed"; // Redireciona para a página desejada
+        }
+    </script>
 </head>
 <body>
     <!-- Barra de navegação -->
@@ -30,7 +37,7 @@
         <!-- Caixa de login -->
         <div class="login-container login-box">
             <h1>Faça seu Login</h1>
-            <form action="/TelaLogin/Login" method="post" class="login-form">
+            <form onsubmit="redirecionar(event)" class="login-form">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="Email" class="form-control" placeholder="Digite seu email" required>

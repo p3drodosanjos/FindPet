@@ -12,6 +12,15 @@ namespace findPet.Controllers
         }
 
         [HttpPost]
+        public IActionResult Create(telaCadastro2Model model)
+        {
+        // Aqui você pode processar os dados do formulário, salvar no banco, etc.
+        
+        // Redireciona para a TelaCadastro2 após o submit
+        return RedirectToAction("Index", "TelaLogin");
+        }
+
+        [HttpPost]
         public IActionResult Index(telaCadastro2Model model)
         {
             if (ModelState.IsValid)

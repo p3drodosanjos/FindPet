@@ -35,7 +35,7 @@
         </div>
 
         <div class="botao">
-          
+
             <button class="iniciar-publicacao" onclick="location.href='TelaPublicacao';">Iniciar Publicação</button>
         </div>
 
@@ -44,21 +44,20 @@
             <h3>@Model.Nome</h3>
 
             <div class="itens">
-                @{
-                  if (Model.ImageFileName != null) {
-                        <img src="/Imagem/@Model.ImageFileName" alt="publicacaoImagem">
-                  }
-                }
-                <div class="item-pub"><i class="fa-solid fa-paw"></i></div>
-                <div class="item-pub"><i class="fa-solid fa-comment"></i></div>
-                <div class="item-pub"><i class="fa-solid fa-rotate-right"></i></div>
+                @if (Model.ImageFileName != null) {
+                <img src="/Imagem/@Model.ImageFileName" alt="publicacaoImagem">
+        }
             </div>
+
+            <div class="item-pub"><i class="fa-solid fa-paw"></i></div>
+            <div class="item-pub"><i class="fa-solid fa-comment"></i></div>
+            <div class="item-pub"><i class="fa-solid fa-rotate-right"></i></div>
 
             <div class="lado-direito">
                 <div class="mensagem"><i class="fa-solid fa-envelope"></i></div>
             </div>
-
         </div>
+
 
     </main>
 </body>

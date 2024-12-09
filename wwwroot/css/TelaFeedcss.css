@@ -171,8 +171,16 @@ body {
     border-radius: 50px;
     height: 700px;
     width: 500px;
-    position:relative;
+    position: relative;
+    overflow: hidden; /* Garante que nada ultrapasse o container */
 }
+
+    /* Estilo para a imagem */
+    .container img {
+        max-width: 90%; /* A imagem ficará no máximo 90% da largura do container */
+        max-height: 90%; /* A imagem ficará no máximo 90% da altura do container */
+        object-fit: contain; /* Garante que a imagem mantenha sua proporção */
+    }
 
 .itens {
     position: absolute; /* Para posicionamento relativo ao container */

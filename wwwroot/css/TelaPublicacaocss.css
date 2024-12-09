@@ -1,5 +1,5 @@
 html {
-    font-size: 150%; /* Define um tamanho base maior para as fontes, útil para escalabilidade. */
+    font-size: 100%; /* Define um tamanho base maior para as fontes, útil para escalabilidade. */
 }
 
 /* Estilo geral do corpo da página */
@@ -119,7 +119,6 @@ h2 {
     margin-bottom: 5px;
 }
 
-
 /* Estilo do texto do label */
 label {
     font-weight: bold; /* Deixa o texto do rótulo em negrito. */
@@ -160,7 +159,10 @@ button {
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     form {
-        width: 90%; /* Formulário ocupa quase toda a largura. */
+        flex: 2; /* O formulário ocupa duas vezes o espaço do upload de imagem. */
+        width: 100%; /* Formulário ocupa toda a largura disponível dentro de seu contêiner. */
+        padding: 20px; /* Adiciona espaçamento interno. */
+        box-sizing: border-box; /* Garante que o padding não afete o layout. */
     }
 
     .form-grid {
@@ -171,25 +173,26 @@ button {
 /* Contêiner principal centralizado */
 .form-content {
     display: flex; /* Layout flexível. */
-    justify-content: space-between; /* Espaça elementos uniformemente. */
-    align-items: center; /* Alinha verticalmente. */
+    justify-content: space-between; /* Distribui o conteúdo entre os dois lados. */
+    align-items: center; /* Alinha verticalmente os itens. */
     gap: 20px; /* Espaçamento entre elementos. */
-    width: 80%; /* Limita largura a 80% da tela. */
+    width: 80%; /* Limita a largura do contêiner para 80% da tela. */
     max-width: 1200px; /* Máxima largura para telas grandes. */
-    margin: auto; /* Centraliza horizontalmente. */
-    height: calc(100vh - 70px); /* Usa altura total menos a barra superior. */
+    height: calc(100vh - 70px); /* Usa altura total menos a altura da barra superior. */
     box-sizing: border-box; /* Inclui bordas no tamanho total. */
 }
 
-    /* Receptor de imagem ocupa 40% */
-    .image-upload {
-    flex: 1; /* Permite ajuste proporcional. */
-    max-width: 10%; /* Limita largura da área de upload. */
+
+/* Receptor de imagem agora centralizado à esquerda */
+.image-upload {
+    flex: 1; /* Permite que ocupe uma parte proporcional da tela. */
+    max-width: 40%; /* Ajuste para ocupar 40% da largura da tela. */
     display: flex; /* Layout flexível. */
-    flex-direction: column; /* Alinha elementos verticalmente. */
+    flex-direction: column; /* Alinha os elementos verticalmente. */
     align-items: center; /* Centraliza horizontalmente. */
     text-align: center; /* Centraliza o texto. */
-    gap: 10px; /* Espaçamento entre itens. */
+    gap: 5px; /* Espaçamento entre os itens. */
+    position: relative; /* Para não sobrepor outros elementos. */
 }
 
 .upload-icon {

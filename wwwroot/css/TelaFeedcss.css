@@ -178,22 +178,46 @@ body {
     /* Estilo para a imagem */
     .container img {
         max-width: 90%; /* A imagem ficará no máximo 90% da largura do container */
-        max-height: 90%; /* A imagem ficará no máximo 90% da altura do container */
+        max-height: 60%; /* A imagem ficará no máximo 90% da altura do container */
         object-fit: contain; /* Garante que a imagem mantenha sua proporção */
     }
 
-.itens {
-    position: absolute; /* Para posicionamento relativo ao container */
-    bottom: 20px; /* Ajuste para o quanto deseja afastar do fundo */
-    left: 20px; /* Ajuste para o quanto deseja afastar do lado esquerdo */
-    display: flex; /* Coloca os itens em linha */
-    gap: 18px; /* Espaçamento entre os itens */
+/* Estilo dos botões-ícones */
+.item-pub {
+    background-color: #88A3E2; /* Cor de fundo */
+    color: #fff; /* Cor do ícone */
+    font-size: 24px; /* Tamanho do ícone */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Torna o botão circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    margin: 10px; /* Espaçamento entre os botões */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
-.item-pub {
-    font-size: 24px; /* Ajuste o tamanho dos ícones conforme necessário */
-    color: #333;
+    /* Efeito ao passar o mouse */
+    .item-pub:hover {
+        transform: scale(1.1); /* Aumenta o botão ligeiramente */
+        background-color: #6b8cd1; /* Escurece um pouco o fundo */
+    }
+
+/* Posicionamento abaixo do container */
+.icones-abaixo {
+    display: flex;
+    gap: 15px; /* Espaçamento horizontal entre os botões */
+    position: absolute; /* Faz os ícones ficarem posicionados em relação ao container */
+    bottom: 20px; /* Distância da parte inferior do container */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centralizar os ícones */
 }
+
+
+
+
 
 .lado-direito {
     position: absolute; /* Para posicionamento relativo ao container */
